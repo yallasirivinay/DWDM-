@@ -1,0 +1,25 @@
+> View(cenn)
+> mean(cenn$`Total Males`)
+[1] 16391.56
+> median(cenn$`Total Males`)
+[1] 15283
+> mode(cenn$`Median Age`)
+[1] "numeric"
+> summary(cenn$`Total Males`)
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+      0    9764   15283   16392   22220   52794 
+> IQR(cenn$`Total Males`)
+[1] 12456
+> quantile(cenn$`Total Males`)
+     0%     25%     50%     75%    100% 
+    0.0  9763.5 15283.0 22219.5 52794.0 
+> range(cenn$`Total Males`)
+[1]     0 52794
+> lf=range(cenn$`Total Males`)-1.5*quantile(cenn$`Total Males`)
+Warning message:
+In range(cenn$`Total Males`) - 1.5 * quantile(cenn$`Total Males`) :
+  longer object length is not a multiple of shorter object length
+> outlier<-boxplot.stats(cenn$`Total Males`)$out
+> print(outlier)
+ [1] 52794 43128 50658 45113 46321 52364 45229 52358 45786 42283 42564
+ 
